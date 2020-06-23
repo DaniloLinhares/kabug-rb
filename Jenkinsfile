@@ -1,5 +1,4 @@
 pipeline {
-
     agent {
         docker {
             image 'ruby'
@@ -8,21 +7,23 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
+             steps {
                 echo 'Building or Resolve Dependencies!'
                 sh 'bundle install'
             }
         }
-                stage('Test') {
+        stage('Test') {
             steps {
                 echo 'Running regression tests'                
             }
-        }        stage('UAT') {
+        }   
+        stage('UAT') {
             steps {
                 echo 'Wait for User Acceptance'
                 input(message: 'Go to production?', ok: 'Yes')
             }
-        }        stage('Prod') {
+        }   
+        stage('Prod') {
             steps {
                 echo 'Webapp is Ready :D'
             }
