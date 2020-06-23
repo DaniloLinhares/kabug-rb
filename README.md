@@ -3,7 +3,7 @@ Repositório para estudo da automação rodar no jenkins
 
 ## Como executar o projeto
 
-*importante ter o Ruby instalado (versão 2.5 ou superior)
+* importante ter o Ruby instalado (versão 2.5 ou superior)
 
 ### Instalar o Bundler
 
